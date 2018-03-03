@@ -6,7 +6,7 @@ import RecipeAdd from "./recipe_add";
 class App extends Component {
   constructor(props) {
     super(props);
-    if (JSON.parse(localStorage.getItem("state")).recipes.length > 0) {
+    if (localStorage.getItem("state") && JSON.parse(localStorage.getItem("state")).recipes.length > 0) {
       this.state = JSON.parse(localStorage.getItem("state"));
     } else {
       this.state = {
